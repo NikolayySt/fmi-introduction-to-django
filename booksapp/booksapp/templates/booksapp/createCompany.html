@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create Author</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+</head>
+<body>
+	<form method="POST">
+		{% csrf_token %}
+		{{ form }}
+		 <div class="form-group">
+   			<label for="company_name">Company Name</label>
+    		<input type="text" class="form-control" id="company_name" name="company_name" value="{{company_name}}" placeholder="Enter name" required="">
+ 		 </div>
+
+		 <button type="submit" class="btn btn-primary" name="createAuthor" value="createAuthor">Create</button>
+	</form>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create Author</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+</head>
+<body>
+	<form method="POST">
+		{% csrf_token %}
+		{{ form }}
+		 <div class="form-group">
+   			<label for="firstName">First Name</label>
+    		<input type="text" class="form-control" id="first_name" name="first_name" value="{{first_name}}" placeholder="Enter name" required="">
+ 		 </div>
+ 		 <div class="form-group">
+   			<label for="lastName">Last Name</label>
+    		<input type="text" class="form-control" id="last_name" name="last_name" value="{{last_name}}" placeholder="Enter last name" required="">
+ 		 </div>
+		 <div class="form-group">
+   			<label for="pseudonym">Pseudonym</label>
+    		<input type="text" class="form-control" id="pseudonym" name="pseudonym" value="{{pseudonym}}" placeholder="Enter authors pseudonym" required="">
+ 		 </div>	
+ 		 <div class="form-group">
+   			<label for="age">Age</label>
+    		<input type="number" class="form-control" id="age" name="age" value="{{age}}" placeholder="Enter authors Age" required>
+ 		 </div>	
+
+		 <button type="submit" class="btn btn-primary" name="createAuthor" value="createAuthor">Create</button>
+	</form>
+</body>
+</html>
